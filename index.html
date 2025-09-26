@@ -7,9 +7,29 @@ Copyright (c) 2025 Jac
 <head>
   <meta charset="UTF-8">
   <title>SyntaxP Binary Editor</title>
-  <script defer src="script.js"></script>
 </head>
 <body>
-  <!-- Your UI goes here -->
+  <h1>SyntaxP Binary Editor</h1>
+  <input type="text" id="binaryInput" placeholder="Type binary here..." />
+  <button onclick="runBF()">Run BF</button>
+  <button onclick="runF()">Run F</button>
+  <pre id="output"></pre>
+
+  <script>
+    // SPDX-License-Identifier: GPL-3.0-or-later
+    // Copyright (c) 2025 Jac
+
+    function runBF() {
+      const input = document.getElementById("binaryInput").value;
+      document.getElementById("output").textContent = `Running BF on: ${input}`;
+      // TODO: Load and run bf.wasm here
+    }
+
+    function runF() {
+      const input = document.getElementById("binaryInput").value;
+      document.getElementById("output").textContent = `Running F on: ${input}`;
+      // TODO: Load and run befunge.wasm here
+    }
+  </script>
 </body>
 </html>
