@@ -10,25 +10,18 @@ Copyright (c) 2025 Jac
 </head>
 <body>
   <h1>SyntaxP Binary Editor</h1>
-  <input type="text" id="binaryInput" placeholder="Type binary here..." />
-  <button onclick="runBF()">Run BF</button>
-  <button onclick="runF()">Run F</button>
+  <input type="text" id="binaryInput" placeholder="Enter chip code or binary..." />
+  <button onclick="runChipCode()">Run Chip Code</button>
   <pre id="output"></pre>
 
   <script>
     // SPDX-License-Identifier: GPL-3.0-or-later
     // Copyright (c) 2025 Jac
 
-    function runBF() {
+    function runChipCode() {
       const input = document.getElementById("binaryInput").value;
-      document.getElementById("output").textContent = `Running BF on: ${input}`;
-      // TODO: Load and run bf.wasm here
-    }
-
-    function runF() {
-      const input = document.getElementById("binaryInput").value;
-      document.getElementById("output").textContent = `Running F on: ${input}`;
-      // TODO: Load and run befunge.wasm here
+      document.getElementById("output").textContent = `Executing chip code: ${input}`;
+      // TODO: Dispatch to your VM or opcode interpreter here
     }
   </script>
 </body>
